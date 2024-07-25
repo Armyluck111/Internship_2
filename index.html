@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="assets/index.css" />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <img
+          src="assets/images/Celebrity Inspired Neon Green Accessories.jpeg"
+          class="slider--img slider__img--active"     onclick="openModal(this.src)"
+        />
+    
+        <img
+          src="assets/images/Silk Paisley Neckerchief - The Carnaby.jpeg"
+          class="slider--img"     onclick="openModal(this.src)"
+        />
+        <img
+          src="assets/images/Vlinderpatroon Bucket Hat.jpeg"
+          class="slider--img"     onclick="openModal(this.src)"
+        />
+        <img
+          src="assets/images/XPONNI Y2k Hats Y2K Cap Grunge Accessories Slouchy Hats for Women Y2k Clothes Y2k Aesthetic Hats.jpeg"
+          class="slider--img"     onclick="openModal(this.src)"
+        />
+      </div>
+
+      <div class="button-wrapper">
+        <button class="slider__left" onclick="preslide()">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button class="slider__right" onclick="nextSlide()">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+
+      <div class="pagination">
+        <div class="pagination__item"></div>
+        <div class="pagination__item"></div>
+        <div class="pagination__item"></div>
+        <div class="pagination__item"></div>
+      </div>
+      <div class="counter">
+        <span class="currentCounter"></span> /
+        <span class="totalCounter"></span>
+      </div>
+    </div>
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" />
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
